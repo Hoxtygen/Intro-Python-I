@@ -40,5 +40,5 @@ elif len(sys.argv) == 3:
             print('Provided value for month is out of range')
 else:
     print('Error: Improper usage')
-    print('usage: 14_cal.py', "[month]", "[year]")
+    print('usage: 14_cal.py', "month", "[year]")
     print('usage:' "[month]", 'must be between', "[1-12]")
