@@ -22,3 +22,23 @@ and does the following:
 import sys
 import calendar
 from datetime import datetime
+
+if len(sys.argv) == 1:
+    today = datetime.now()
+    print(calendar.month(today.year, today.month))
+elif len(sys.argv) == 2:
+    if(int(sys.argv[1]) <= 12):
+        today = datetime.now()
+        print(calendar.month(today.year, int(sys.argv[1])))
+    else:
+        print('Provided value for month is out of range')
+elif len(sys.argv) == 3:
+      if (int(sys.argv[1]) <= 12):
+            today = datetime.now()
+            print(calendar.month(int(sys.argv[2]), int(sys.argv[1])))
+      else:
+            print('Provided value for month is out of range')
+else:
+    print('Error: Improper usage')
+    print('usage: 14_cal.py', "[month]", "[year]")
+    print('usage:' "[month]", 'must be between', "[1-12]")
